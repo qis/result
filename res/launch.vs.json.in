@@ -1,0 +1,14 @@
+{
+  "version": "0.2.1",
+  "defaults": {},
+  "configurations": [
+    {
+      "type": "default",
+      "name": "@PROJECT_NAME@.exe",
+      "project": "CMakeLists.txt",
+      "projectTarget": "@PROJECT_NAME@.exe",
+      "currentDir": "${workspaceRoot}",
+      "args": []
+    }
+  ]
+}

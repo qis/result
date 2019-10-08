@@ -1,0 +1,44 @@
+{
+  "configurations": [
+    {
+      "name": "Debug",
+      "generator": "Ninja",
+      "configurationType": "Debug",
+      "inheritEnvironments": [ "msvc_x64_x64" ],
+      "cmakeExecutable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+      "cmakeToolchain": "${env.VCPKG_ROOT}\\scripts\\buildsystems\\vcpkg.cmake",
+      "installRoot": "${projectDir}\\install\\msvc\\debug",
+      "buildRoot": "${projectDir}\\build\\msvc\\debug",
+      "variables": [
+        {
+          "name": "VCPKG_CHAINLOAD_TOOLCHAIN_FILE",
+          "value": "${env.VCPKG_ROOT}\\scripts\\toolchains\\windows.cmake"
+        },
+        {
+          "name": "VCPKG_TARGET_TRIPLET",
+          "value": "${env.VCPKG_DEFAULT_TRIPLET}"
+        }
+      ]
+    },
+    {
+      "name": "Release",
+      "generator": "Ninja",
+      "configurationType": "Release",
+      "inheritEnvironments": [ "msvc_x64_x64" ],
+      "cmakeExecutable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+      "cmakeToolchain": "${env.VCPKG_ROOT}\\scripts\\buildsystems\\vcpkg.cmake",
+      "installRoot": "${projectDir}\\install\\msvc\\release",
+      "buildRoot": "${projectDir}\\build\\msvc\\release",
+      "variables": [
+        {
+          "name": "VCPKG_CHAINLOAD_TOOLCHAIN_FILE",
+          "value": "${env.VCPKG_ROOT}\\scripts\\toolchains\\windows.cmake"
+        },
+        {
+          "name": "VCPKG_TARGET_TRIPLET",
+          "value": "${env.VCPKG_DEFAULT_TRIPLET}"
+        }
+      ]
+    }
+  ]
+}
